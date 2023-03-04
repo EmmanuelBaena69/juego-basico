@@ -53,6 +53,7 @@ namespace juego_pai
             tmrStart.Enabled = false;
         }
 
+        //esta malo, no funcionan los limites con los mueros, ayuda pablo please <3
         private void picNave_Click(object sender, EventArgs e)
         {
             if (picNave.Location.X >= ClientSize.Width)

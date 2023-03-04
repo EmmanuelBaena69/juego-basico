@@ -6,7 +6,7 @@ namespace juego_pai
 {
     public partial class Form1 : Form
     {
-        float velocidad = 15;
+        int velocidad = 15;
         int x;
         int y;
         bool limiteLeft = false;
@@ -31,7 +31,7 @@ namespace juego_pai
 
         private void tmrStart_Tick(object sender, EventArgs e)
         {
-            picMonster.Left += (int)velocidad;
+            picMonster.Left += velocidad;
 
             if (picMonster.Right > ClientSize.Width)
             {

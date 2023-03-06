@@ -49,7 +49,6 @@
             picNave.SizeMode = PictureBoxSizeMode.Zoom;
             picNave.TabIndex = 0;
             picNave.TabStop = false;
-            picNave.Click += picNave_Click;
             // 
             // btnStart
             // 
@@ -82,7 +81,7 @@
             picMonster.Image = (Image)resources.GetObject("picMonster.Image");
             picMonster.Location = new Point(351, 12);
             picMonster.Name = "picMonster";
-            picMonster.Size = new Size(87, 71);
+            picMonster.Size = new Size(87, 74);
             picMonster.SizeMode = PictureBoxSizeMode.Zoom;
             picMonster.TabIndex = 3;
             picMonster.TabStop = false;

@@ -14,18 +14,26 @@ namespace juego_pai
         public Form1()
         {
             InitializeComponent();
+            x = picNave.Location.X;
+            y = picNave.Location.Y;
         }
 
         //manejar con las flechas
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Right)
+            if (picNave.Location.X <= (Size.Width - (picNave.Width*1.235)))
             {
-                this.picNave.Location = new Point(picNave.Location.X + 20, picNave.Location.Y);
+                if (e.KeyCode == Keys.Right)
+                {
+                    picNave.Location = new Point(picNave.Location.X + 20, picNave.Location.Y);
+                }
             }
-            else if (e.KeyCode == Keys.Left)
+            if (picNave.Location.X >= 0)
             {
-                this.picNave.Location = new Point(picNave.Location.X - 20, picNave.Location.Y);
+                if (e.KeyCode == Keys.Left)
+                {
+                    picNave.Location = new Point(picNave.Location.X - 20, picNave.Location.Y);
+                }
             }
         }
 
@@ -51,19 +59,6 @@ namespace juego_pai
         private void btnPause_Click(object sender, EventArgs e)
         {
             tmrStart.Enabled = false;
-        }
-
-        //esta malo, no funcionan los limites con los mueros, ayuda pablo please <3
-        private void picNave_Click(object sender, EventArgs e)
-        {
-            if (picNave.Location.X >= ClientSize.Width)
-            {
-                picNave.Location = new Point(picNave.Location.X, y);
-            }
-            else if (picNave.Location.X <= 0)
-            {
-                picNave.Location = new Point(picNave.Location.X, y);
-            }
         }
     }
 }
